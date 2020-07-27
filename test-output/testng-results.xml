@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="SAP Sign Up Suite" duration-ms="7995" started-at="2020-07-27T04:08:34Z" finished-at="2020-07-27T04:08:42Z">
+    <groups>
+    </groups>
+    <test name="Chrome Sign Up test" duration-ms="7995" started-at="2020-07-27T04:08:34Z" finished-at="2020-07-27T04:08:42Z">
+      <class name="com.sap.testcases.SignUpTest">
+        <test-method status="PASS" signature="triggerDependency()[pri:0, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="triggerDependency" is-config="true" duration-ms="7273" started-at="2020-07-27T04:08:27Z" finished-at="2020-07-27T04:08:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- triggerDependency -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="setUp" is-config="true" duration-ms="39" started-at="2020-07-27T04:08:34Z" finished-at="2020-07-27T04:08:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyTitle()[pri:1, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="verifyTitle" duration-ms="34" started-at="2020-07-27T04:08:34Z" finished-at="2020-07-27T04:08:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="setUp" is-config="true" duration-ms="6" started-at="2020-07-27T04:08:34Z" finished-at="2020-07-27T04:08:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="cookies()[pri:2, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="cookies" duration-ms="157" started-at="2020-07-27T04:08:34Z" finished-at="2020-07-27T04:08:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cookies -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="setUp" is-config="true" duration-ms="4" started-at="2020-07-27T04:08:34Z" finished-at="2020-07-27T04:08:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="clikcSignUpBtn()[pri:3, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="clikcSignUpBtn" duration-ms="2600" started-at="2020-07-27T04:08:34Z" finished-at="2020-07-27T04:08:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clikcSignUpBtn -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="setUp" is-config="true" duration-ms="1" started-at="2020-07-27T04:08:37Z" finished-at="2020-07-27T04:08:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyRegisterPopUp()[pri:4, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="verifyRegisterPopUp" duration-ms="131" started-at="2020-07-27T04:08:37Z" finished-at="2020-07-27T04:08:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterPopUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="setUp" is-config="true" duration-ms="1" started-at="2020-07-27T04:08:38Z" finished-at="2020-07-27T04:08:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="EnterUserDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="EnterUserDetails" duration-ms="1311" started-at="2020-07-27T04:08:38Z" data-provider="retriveData" finished-at="2020-07-27T04:08:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ravi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[kone]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ravikone@yopmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@1234]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterUserDetails -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="setUp" is-config="true" duration-ms="2" started-at="2020-07-27T04:08:40Z" finished-at="2020-07-27T04:08:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifySuccessMsg()[pri:6, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="verifySuccessMsg" duration-ms="2243" started-at="2020-07-27T04:08:40Z" finished-at="2020-07-27T04:08:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuccessMsg -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.sap.testcases.SignUpTest@1e397ed7]" name="closeBrowser" is-config="true" duration-ms="184" started-at="2020-07-27T04:08:43Z" finished-at="2020-07-27T04:08:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.sap.testcases.SignUpTest -->
+    </test> <!-- Chrome Sign Up test -->
+  </suite> <!-- SAP Sign Up Suite -->
+</testng-results>

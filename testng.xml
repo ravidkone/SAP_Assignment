@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SAP Sign Up Suite">
+
+	<test name="Chrome Sign Up test">
+	<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.sap.testcases.SignUpTest" />
+		</classes>
+	</test>
+
+</suite> 
