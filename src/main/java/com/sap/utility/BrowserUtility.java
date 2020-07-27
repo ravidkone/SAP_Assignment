@@ -29,14 +29,15 @@ public class BrowserUtility extends TestBase {
 			WebDriverManager.chromedriver().setup();
 		dc.setCapability(CapabilityType.BROWSER_NAME,BrowserType.CHROME);
 		dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.MAC);
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resource");
 
 		} else if (browser.equalsIgnoreCase(System.getProperty("browser"))) {
 			dc.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
 			dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
+			System.setProperty("webdriver.geckodriver.driver",System.getProperty("user.dir")+"/src/test/resource");
 		}
 
 		URL url=new URL(System.getProperty("Remote_WebDriver_IP"));
-		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resource");
 		driver=new RemoteWebDriver(url,dc);
 		driver.get(System.getProperty("url"));
 		driver.manage().window().maximize();
