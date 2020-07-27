@@ -61,31 +61,6 @@ $ mvn test      // [this will start executing the test cases]
 Note: for the first time it will download the all the required jars(it may take little time) 
 and then execute the test cases, from second time onward it will be faster.
 ```
-To change the browser, enter below cmd from project folder which will redirect to config folder and open config file
-Change the browser option from chrome to Firefox
-
-##### In MAC
-
-Once you opened a file with vim you can insert text by typing i, for instance.
-If you want to save your file use :w (write) or :q (quit) or :wq (for write and quit) or :q! (quit and do not save). 
-Sometimes you need to hit the ESC key to be able to type the commands.
-```
-
-cd src/main/java/com/gojek/qa/config/
-vi config.properties
-```
-
-##### In Windows
-Open the file by choosing appropriate app(note pad) and change browser value to Firefox and save it.
-```
-cd src/main/java/com/gojek/qa/config/config.properties
-```
-
-Move to back to Project folder and run again below cmd, now Firefox browser will be triggered
-```
-mvn clean
-mvn test
-```
 
 ## How to open the project in Eclipse IDE
 Step 1: Open Eclipse IDE, click on File Tab and select "Open Projects from File System.." 
