@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [SAP Sign Up Suite]">
-  <test thread-count="5" name="Chrome Sign Up test(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [SAP Sign Up Suite]">
+  <listeners>
+    <listener class-name="com.sap.reports.TestListener"/>
+  </listeners>
+  <test thread-count="2" name="Platform_Sign_up(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.sap.testcases.SignUpTest">
         <methods>
           <include name="triggerDependency"/>
-          <include name="verifySuccessMsg"/>
-          <include name="closeBrowser"/>
+          <include name="failTest"/>
           <include name="setUp"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- com.sap.testcases.SignUpTest -->
     </classes>
-  </test> <!-- Chrome Sign Up test(failed) -->
+  </test> <!-- Platform_Sign_up(failed) -->
 </suite> <!-- Failed suite [SAP Sign Up Suite] -->

@@ -1,11 +1,13 @@
 package com.sap.utility;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Listeners;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
-@Listeners(com.sap.reports.TestListener.class)
+import com.aventstack.extentreports.ExtentTest;
+
+//@Listeners(com.sap.reports.TestListener.class)
 public class TestBase {
 
 	public static BrowserUtility oBrowserUtil = new BrowserUtility();
@@ -15,16 +17,21 @@ public class TestBase {
 	public static RemoteWebDriver driver;
 	public static String sClassNameForScreenShot;
 
+    public static ExtentTest extLogger;
+//    public static ExtentTest t1;
 //	public static WebDriver driver;
 	
 	
-	@BeforeSuite
-	public void triggerDependency() throws Exception {
-		
+	@BeforeClass
+	@Parameters("browser")
+	public void triggerDependency(String browser) throws Exception {
+		System.out.println("Test running on browser: "+browser);
 		oCommon.loadConfigProperty(System.getProperty("user.dir")+"/src/main/java/com/sap/properties/config.properties");
 		
 		if (System.getProperty("AutomationRunning").equalsIgnoreCase(Constants.AutomationWeb)) {
-			oBrowserUtil.launchBrowser(System.getProperty("browser"));
+		//	oBrowserUtil.launchBrowser(System.getProperty("browser"));
+			oBrowserUtil.launchBrowser(browser);
+
 			System.out.println("Automation running on: "+System.getProperty("AutomationRunning"));
 			System.out.println("Environment is: "+System.getProperty("Environment"));
 		}
@@ -33,7 +40,7 @@ public class TestBase {
 		} 
 	}
 	
-	@AfterSuite
+	@AfterClass
 	public void closeBrowser() {
 		if(System.getProperty("AutomationRunning").equalsIgnoreCase(Constants.AutomationWeb)) {
 			driver.quit();

@@ -14,6 +14,10 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.WebDriver;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.markuputils.Markup;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
@@ -24,7 +28,7 @@ public class CommonUtility {
 	Properties prop = new Properties();
 	static Workbook book;
 	static Sheet sheet;
-	public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir")+"/src/test/resource/SAP_TestData.xlsx";
+	public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir") + "/src/test/resource/SAP_TestData.xlsx";
 
 	public void loadConfigProperty(String sConfigPath) throws Exception {
 		FileInputStream fis = new FileInputStream(sConfigPath);
@@ -38,7 +42,7 @@ public class CommonUtility {
 		// System.getProperties().putAll(prop);
 	}
 
-	public static Object[][] getExceldata(String sheetName) {
+	public Object[][] getExceldata(String sheetName) {
 		FileInputStream file = null;
 		try {
 			file = new FileInputStream(TESTDATA_SHEET_PATH);
@@ -63,13 +67,29 @@ public class CommonUtility {
 		return data;
 
 	}
+
 	public static String takeScreenShotWebReturnPath(WebDriver driver, String getMethodName) throws IOException {
 		String sDestDir = "/screenshots/";
-		String sImageName = System.getProperty("user.dir") + sDestDir+getMethodName+".jpg";
-		Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+		String sImageName = System.getProperty("user.dir") + sDestDir + getMethodName + ".jpg";
+		Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
+				.takeScreenshot(driver);
 		ImageIO.write(screenshot.getImage(), "jpg", new File(sImageName));
 		System.out.println(sImageName);
 		return sImageName;
+	}
+
+	// To add message in extent report
+	public boolean verifyEqual(String actual, String expected, String message, ExtentTest extLogger) {
+
+		String[][] data = { { "Message", message }, { "Actual", actual }, { "Expected", expected } };
+		Markup m = MarkupHelper.createTable(data);
+		if (actual.equals(expected)) {
+			extLogger.pass(m);
+			return true;
+		} else {
+			extLogger.fail(m);
+		}
+		return false;
 	}
 
 }

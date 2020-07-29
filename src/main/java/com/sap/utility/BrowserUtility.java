@@ -4,39 +4,34 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.BrowserType;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserUtility extends TestBase {
 
 	DesiredCapabilities dc;
 
-	@BeforeClass
-	@Parameters("browser")
+	
 	public void launchBrowser(String browser) throws MalformedURLException {
 		dc = new DesiredCapabilities();
 
-		if (browser.equalsIgnoreCase(System.getProperty("browser"))) {
-			WebDriverManager.chromedriver().setup();
-		dc.setCapability(CapabilityType.BROWSER_NAME,BrowserType.CHROME);
-		dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.MAC);
-		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resource");
+		if (browser.equalsIgnoreCase("chrome")) {
+		//	WebDriverManager.chromedriver().setup();
+//		dc.setCapability(CapabilityType.BROWSER_NAME,BrowserType.CHROME);
+//		dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.MAC );
+			dc.setBrowserName(BrowserType.CHROME);
 
-		} else if (browser.equalsIgnoreCase(System.getProperty("browser"))) {
-			dc.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
-			dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
-			System.setProperty("webdriver.geckodriver.driver",System.getProperty("user.dir")+"/src/test/resource");
+		} else if (browser.equalsIgnoreCase("firefox")) {
+//			dc.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
+//			dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.MAC);
+			dc.setBrowserName(BrowserType.FIREFOX);
+
 		}
-
+		
+	//	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resource");
 		URL url=new URL(System.getProperty("Remote_WebDriver_IP"));
 		driver=new RemoteWebDriver(url,dc);
 		driver.get(System.getProperty("url"));
@@ -68,6 +63,12 @@ public class BrowserUtility extends TestBase {
 		}
 
 		return bRes_flag;
+
+	}
+	
+	public void switchFrame() {
+		
+	driver.switchTo().frame("https://accounts.sap.com/ui/public/showRegisterForm?sourceUrl=https%3A%2F%2Fcai.tools.sap%2F&targetUrl=https%3A%2F%2Fcai.tools.sap%2Flogin%2FloggedIn&spName=https%3A%2F%2Fsapcai-community.authentication.eu10.hana.ondemand.com#https%3A%2F%2Fcai.tools.sap%2F");
 
 	}
 

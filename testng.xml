@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SAP Sign Up Suite">
+<suite name="SAP Sign Up Suite" parallel="false" thread-count="2">
 
-	<test name="Chrome Sign Up test">
+		<listeners> 
+		<listener class-name="com.sap.reports.TestListener"/> 
+		</listeners>
+	
+
+	<test name="Platform_Sign_up">
 	<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.sap.testcases.SignUpTest" />
 		</classes>
 	</test>
+	
+<!-- 	<test name="FireFox Sign Up test">
+	<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.sap.testcases.SignUpTest" />
+		</classes>
+	</test> -->
 
 </suite> 

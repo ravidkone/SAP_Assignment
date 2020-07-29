@@ -5,7 +5,6 @@ import java.io.File;
 import org.openqa.selenium.Platform;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -15,7 +14,7 @@ import com.sap.utility.TestBase;
 
 public class ExtentManager extends TestBase{
     private static ExtentReports extent;
-    public static ExtentTest extLogger;
+ //   public static ExtentTest extLogger;
     
     private static Platform platform;
     private static String reportFileName = "Ravi_Automaton_Report.html";
@@ -51,7 +50,10 @@ public class ExtentManager extends TestBase{
         //htmlReporter.config().setAutoCreateRelativePathMedia(true);
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
- 
+        extent.setSystemInfo("Automation Tester", "Ravi Kone");
+        extent.setSystemInfo("Organization", "Test Compnay");
+        extent.setSystemInfo("Build No:", "SAP-11");
+
         return extent;
     }
  

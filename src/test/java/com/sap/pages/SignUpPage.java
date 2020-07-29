@@ -33,7 +33,7 @@ public class SignUpPage extends TestBase{
 	WebElement termsCondition;
 	@FindBy(id = "sapStoreRegisterFormSubmit")
 	WebElement submitBtn;
-	@FindBy(className = "ids-heading-1")
+	@FindBy(xpath = "//h1[text()='Thank you for registering with SAP Conversational AI']")
 	WebElement successMsg;
 	@FindBy(xpath = "//a[@title='Close']")
 	WebElement popUpclose;
@@ -42,8 +42,10 @@ public class SignUpPage extends TestBase{
 		PageFactory.initElements(TestBase.driver, this);
 	}
 	
-	public void acceptCookies() {
+	public Boolean acceptCookies() {
+		Boolean cookiesStatus=cookies.isDisplayed();
 		cookies.click();
+		return cookiesStatus;
 	}
 	
 	public String getTitle() {
@@ -55,7 +57,8 @@ public class SignUpPage extends TestBase{
 		oBrowserUtil.waitForElementVisible(driver, frame, 2);
 	}
 	
-	public void verifyRegisterPopUp() {
+	public void verifyRegisterPopUp() throws InterruptedException {
+			oBrowserUtil.waitForElementVisible(driver, regPopUp, 3);
 			String text =regPopUp.getText();
 			System.out.println("frame text is: "+text);
 	}
