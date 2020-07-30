@@ -9,6 +9,8 @@ import java.util.Properties;
 import javax.imageio.ImageIO;
 
 import org.apache.commons.compress.archivers.dump.InvalidFormatException;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -29,20 +31,26 @@ public class CommonUtility {
 	static Workbook book;
 	static Sheet sheet;
 	public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir") + "/src/test/resource/SAP_TestData.xlsx";
+	Logger log = Logger.getLogger(getClass().getSimpleName());
 
 	public void loadConfigProperty(String sConfigPath) throws Exception {
+		log.info("Current dir using System:" + sConfigPath);
 		FileInputStream fis = new FileInputStream(sConfigPath);
 		prop.load(fis);
 		System.getProperties().putAll(prop);
 	}
 
 	public void loadLog4jProperty(String sLog4jPath) throws Exception {
+		log.info("Current dir using System:" + sLog4jPath);
 		FileInputStream fis = new FileInputStream(sLog4jPath);
 		prop.load(fis);
-		// System.getProperties().putAll(prop);
+		System.getProperties().putAll(prop);
+		PropertyConfigurator.configure(prop);
 	}
 
 	public Object[][] getExceldata(String sheetName) {
+		log.info("Current dir using System:" + TESTDATA_SHEET_PATH);
+
 		FileInputStream file = null;
 		try {
 			file = new FileInputStream(TESTDATA_SHEET_PATH);
@@ -83,6 +91,7 @@ public class CommonUtility {
 
 		String[][] data = { { "Message", message }, { "Actual", actual }, { "Expected", expected } };
 		Markup m = MarkupHelper.createTable(data);
+
 		if (actual.equals(expected)) {
 			extLogger.pass(m);
 			return true;

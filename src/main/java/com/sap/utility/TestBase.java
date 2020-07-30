@@ -1,5 +1,6 @@
 package com.sap.utility;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -18,22 +19,26 @@ public class TestBase {
 	public static String sClassNameForScreenShot;
 
     public static ExtentTest extLogger;
-//    public static ExtentTest t1;
+//  public static ExtentTest t1;
 //	public static WebDriver driver;
 	
-	
+	Logger log=Logger.getLogger(getClass().getSimpleName());
+
 	@BeforeClass
 	@Parameters("browser")
 	public void triggerDependency(String browser) throws Exception {
-		System.out.println("Test running on browser: "+browser);
-		oCommon.loadConfigProperty(System.getProperty("user.dir")+"/src/main/java/com/sap/properties/config.properties");
+		log.info("Test running on browser: "+browser);
 		
+		oCommon.loadConfigProperty(System.getProperty("user.dir")+"/src/main/java/com/sap/properties/config.properties");
+		oCommon.loadLog4jProperty(System.getProperty("user.dir")+"/src/main/java/com/sap/properties/log4j.properties");
+
 		if (System.getProperty("AutomationRunning").equalsIgnoreCase(Constants.AutomationWeb)) {
 		//	oBrowserUtil.launchBrowser(System.getProperty("browser"));
 			oBrowserUtil.launchBrowser(browser);
 
-			System.out.println("Automation running on: "+System.getProperty("AutomationRunning"));
-			System.out.println("Environment is: "+System.getProperty("Environment"));
+			log.info("Automation running on: "+System.getProperty("AutomationRunning"));
+			log.info("Environment is: "+System.getProperty("Environment"));
+	
 		}
 		if (System.getProperty("AutomationRunning").equalsIgnoreCase("API")) {
 			sHost = System.getProperty("stageHost");
@@ -44,7 +49,7 @@ public class TestBase {
 	public void closeBrowser() {
 		if(System.getProperty("AutomationRunning").equalsIgnoreCase(Constants.AutomationWeb)) {
 			driver.quit();
-			System.out.println("Browser closed");
+			log.info("Browser closed");
 	}
 	}
 }

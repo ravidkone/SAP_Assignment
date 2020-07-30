@@ -9,46 +9,45 @@ import com.sap.pages.SignUpPage;
 import com.sap.utility.Constants;
 import com.sap.utility.TestBase;
 
-public class SignUpTest extends TestBase{
+public class SignUpTest extends TestBase {
 	SignUpPage sp;
 //	ExtentTest t1;
-	
+
 	@BeforeMethod
 	public void setUp() {
 		sp = new SignUpPage(driver);
 		sClassNameForScreenShot = getClass().getSimpleName();
-	//	t1=extLogger.createNode("Verify Text");
+		// t1=extLogger.createNode("Verify Text");
 	}
 
 	@Test(priority = 1)
 	public void verifyTitle() throws InterruptedException {
-		oCommon.verifyEqual(sp.getTitle(),Constants.pageTitle, "Verify Page Title", extLogger.createNode("Verify Title"));
+		oCommon.verifyEqual(sp.getTitle(), Constants.pageTitle, "Verify Page Title",
+				extLogger.createNode("Verify Title"));
 		Assert.assertEquals(Constants.pageTitle, sp.getTitle());
 		System.out.println("title matched");
-		
+
 	}
 
 	@Test(priority = 2)
-	public void cookies() {
-	sp.acceptCookies();
+	public void cookies() throws Exception {
+		sp.acceptCookies();
 		System.out.println("cookies accepted");
 	}
 
 	@Test(priority = 3)
-	public void clikcSignUpBtn() throws InterruptedException {
-		
+	public void clickSignUpBtn() throws Exception {
+
 		sp.clickSignUp();
 		System.out.println("clicked on Sign Up button");
 		oBrowserUtil.switchFrame();
-		
-		//driver.switchTo().frame("https://accounts.sap.com/ui/public/showRegisterForm?sourceUrl=https%3A%2F%2Fcai.tools.sap%2F&targetUrl=https%3A%2F%2Fcai.tools.sap%2Flogin%2FloggedIn&spName=https%3A%2F%2Fsapcai-community.authentication.eu10.hana.ondemand.com#https%3A%2F%2Fcai.tools.sap%2F");
-		//driver.switchTo().frame(0);
 	}
 
 	@Test(priority = 4)
 	public void verifyRegisterPopUp() throws InterruptedException {
-		
-		sp.verifyRegisterPopUp();
+		oCommon.verifyEqual(sp.verifyRegisterPopUp(), Constants.popUpText, "Verify PopUp Text",
+				extLogger.createNode("Verify PopUp"));
+		Assert.assertEquals(Constants.popUpText, sp.verifyRegisterPopUp());
 	}
 
 	@DataProvider
@@ -66,16 +65,17 @@ public class SignUpTest extends TestBase{
 
 	@Test(priority = 6)
 	public void verifySuccessMsg() throws InterruptedException {
-		oCommon.verifyEqual(sp.getSucessMsg(),Constants.successMsg, "Verify Success Message Title", extLogger.createNode("Verify Success Msg"));
+		oCommon.verifyEqual(sp.getSucessMsg(), Constants.successMsg, "Verify Success Message Text",
+				extLogger.createNode("Verify Success Msg"));
 		Assert.assertEquals(Constants.successMsg, sp.getSucessMsg());
 		sp.closePopUp();
 	}
-	
-	@Test(priority = 7)
-	public void failTest() {
-		oCommon.verifyEqual(sp.getTitle(),Constants.pageText, "Verify Page Title", extLogger.createNode("Verify Title"));
-	
-		Assert.assertEquals(true,false);
-	}
-	
+
+//	@Test(priority = 7)
+//	public void failTest() {
+//		oCommon.verifyEqual(sp.getTitle(),Constants.pageText, "Verify Page Title", extLogger.createNode("Verify Title"));
+//	
+//		Assert.assertEquals(true,false);
+//	}
+
 }

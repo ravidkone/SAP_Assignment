@@ -35,9 +35,9 @@ public class TestListener implements ITestListener {
 
 	public synchronized void onTestStart(ITestResult result) {
 		System.out.println((result.getMethod().getMethodName() + " started!"));
-		
-		ExtentManager.extLogger = extent.createTest(result.getMethod().getMethodName(),
-				result.getMethod().getDescription());
+
+		ExtentManager.extLogger = extent.createTest("ClassName: " + result.getTestClass().getRealClass().getSimpleName()
+				+ "- Medthod: " + result.getMethod().getMethodName(), result.getMethod().getDescription());
 		test.set(ExtentManager.extLogger);
 	}
 
@@ -50,19 +50,17 @@ public class TestListener implements ITestListener {
 	public synchronized void onTestFailure(ITestResult result) {
 		System.out.println((result.getMethod().getMethodName() + " failed!"));
 		System.out.println("*******************");
-		
-		String failLog="Test Case failed";
-		Markup m=MarkupHelper.createLabel(failLog, ExtentColor.RED);
-		test.get().log(Status.FAIL, m);
-		
-	//	test.get().fail("Test Failed");
-	//	test.get().fail(result.getThrowable());
-		String eMsg=Arrays.toString(result.getThrowable().getStackTrace());
-		test.get().fail("<details>"+"<summary>"+"<b>"+"<font color="+"red>"+
-		"Exception occured:Click to see"+"</font>"+"</b>"+"</summary>"+
-		eMsg.replaceAll(",", "<br>")+"</details>"+"\n");
 
-		
+		String failLog = "Test Case failed";
+		Markup m = MarkupHelper.createLabel(failLog, ExtentColor.RED);
+		test.get().log(Status.FAIL, m);
+
+		// test.get().fail("Test Failed");
+		// test.get().fail(result.getThrowable());
+		String eMsg = Arrays.toString(result.getThrowable().getStackTrace());
+		test.get().fail("<details>" + "<summary>" + "<b>" + "<font color=" + "red>" + "Exception occured:Click to View"
+				+ "</font>" + "</b>" + "</summary>" + eMsg.replaceAll(",", "<br>") + "</details>" + "\n");
+
 		try {
 			ExtentManager.extLogger.log(Status.FAIL,
 					"Failed" + ExtentManager.extLogger
@@ -70,7 +68,7 @@ public class TestListener implements ITestListener {
 									TestBase.sClassNameForScreenShot + "_" + result.getMethod().getMethodName())));
 		} catch (IOException e) {
 		}
-		
+
 	}
 
 	public synchronized void onTestSkipped(ITestResult result) {
@@ -84,7 +82,7 @@ public class TestListener implements ITestListener {
 									TestBase.sClassNameForScreenShot + "_" + result.getMethod().getMethodName())));
 		} catch (IOException e) {
 		}
-		
+
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {

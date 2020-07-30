@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.BrowserType;
@@ -13,27 +14,27 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class BrowserUtility extends TestBase {
 
 	DesiredCapabilities dc;
+	Logger log = Logger.getLogger(getClass().getSimpleName());
 
-	
 	public void launchBrowser(String browser) throws MalformedURLException {
 		dc = new DesiredCapabilities();
 
 		if (browser.equalsIgnoreCase("chrome")) {
-		//	WebDriverManager.chromedriver().setup();
+			log.info("Launching Browser: " + browser);
 //		dc.setCapability(CapabilityType.BROWSER_NAME,BrowserType.CHROME);
 //		dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.MAC );
 			dc.setBrowserName(BrowserType.CHROME);
 
 		} else if (browser.equalsIgnoreCase("firefox")) {
+			log.info("Launching Browser: " + browser);
 //			dc.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
 //			dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.MAC);
 			dc.setBrowserName(BrowserType.FIREFOX);
 
 		}
-		
-	//	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/src/test/resource");
-		URL url=new URL(System.getProperty("Remote_WebDriver_IP"));
-		driver=new RemoteWebDriver(url,dc);
+
+		URL url = new URL(System.getProperty("Remote_WebDriver_IP"));
+		driver = new RemoteWebDriver(url, dc);
 		driver.get(System.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
@@ -44,6 +45,7 @@ public class BrowserUtility extends TestBase {
 		boolean bRes_flag = false;
 		try {
 			if (ele.isDisplayed()) {
+				log.info("Displayed " + ele);
 				bRes_flag = true;
 			}
 		} catch (Exception e) {
@@ -65,10 +67,11 @@ public class BrowserUtility extends TestBase {
 		return bRes_flag;
 
 	}
-	
+
 	public void switchFrame() {
-		
-	driver.switchTo().frame("https://accounts.sap.com/ui/public/showRegisterForm?sourceUrl=https%3A%2F%2Fcai.tools.sap%2F&targetUrl=https%3A%2F%2Fcai.tools.sap%2Flogin%2FloggedIn&spName=https%3A%2F%2Fsapcai-community.authentication.eu10.hana.ondemand.com#https%3A%2F%2Fcai.tools.sap%2F");
+
+		driver.switchTo().frame(
+				"https://accounts.sap.com/ui/public/showRegisterForm?sourceUrl=https%3A%2F%2Fcai.tools.sap%2F&targetUrl=https%3A%2F%2Fcai.tools.sap%2Flogin%2FloggedIn&spName=https%3A%2F%2Fsapcai-community.authentication.eu10.hana.ondemand.com#https%3A%2F%2Fcai.tools.sap%2F");
 
 	}
 

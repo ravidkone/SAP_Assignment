@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-SAP_Sign_Up_Suite">
-              <span class="suite-name border-failed">SAP Sign Up Suite</span>
+              <span class="suite-name border-passed">SAP Sign Up Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-SAP_Sign_Up_Suite" class="hide-methods failed suite-SAP_Sign_Up_Suite"> (hide)</a> <!-- hide-methods failed suite-SAP_Sign_Up_Suite -->
-                      <a href="#" panel-name="suite-SAP_Sign_Up_Suite" class="show-methods failed suite-SAP_Sign_Up_Suite"> (show)</a> <!-- show-methods failed suite-SAP_Sign_Up_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-SAP_Sign_Up_Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SAP_Sign_Up_Suite" title="com.sap.testcases.SignUpTest" hash-for-method="failTest">failTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-SAP_Sign_Up_Suite -->
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -121,7 +107,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SAP_Sign_Up_Suite" title="com.sap.testcases.SignUpTest" hash-for-method="clikcSignUpBtn">clikcSignUpBtn</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SAP_Sign_Up_Suite" title="com.sap.testcases.SignUpTest" hash-for-method="clickSignUpBtn">clickSignUpBtn</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -156,25 +142,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SAP_Sign_Up_Suite" class="panel SAP_Sign_Up_Suite">
-          <div class="suite-SAP_Sign_Up_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.sap.testcases.SignUpTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="failTest">
-                  </a> <!-- failTest -->
-                  <span class="method-name">failTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
-	at com.sap.testcases.SignUpTest.failTest(SignUpTest.java:78)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SAP_Sign_Up_Suite-class-failed -->
           <div class="suite-SAP_Sign_Up_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -191,9 +158,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="clikcSignUpBtn">
-                  </a> <!-- clikcSignUpBtn -->
-                  <span class="method-name">clikcSignUpBtn</span>
+                  <a name="clickSignUpBtn">
+                  </a> <!-- clickSignUpBtn -->
+                  <span class="method-name">clickSignUpBtn</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -235,11 +202,11 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;SAP Sign Up Suite&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;SAP Sign Up Suite&quot; parallel=&quot;tests&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.sap.reports.TestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;Platform_Sign_up&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;Platform_Sign_up&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.sap.testcases.SignUpTest&quot;/&gt;
@@ -282,40 +249,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'clikcSignUpBtn')
+data.setCell(0, 1, 'clickSignUpBtn')
 data.setCell(0, 2, 'com.sap.testcases.SignUpTest')
-data.setCell(0, 3, 2935);
+data.setCell(0, 3, 3845);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'EnterUserDetails')
 data.setCell(1, 2, 'com.sap.testcases.SignUpTest')
-data.setCell(1, 3, 2618);
+data.setCell(1, 3, 3780);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifySuccessMsg')
 data.setCell(2, 2, 'com.sap.testcases.SignUpTest')
-data.setCell(2, 3, 1835);
+data.setCell(2, 3, 2646);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'cookies')
+data.setCell(3, 1, 'verifyRegisterPopUp')
 data.setCell(3, 2, 'com.sap.testcases.SignUpTest')
-data.setCell(3, 3, 516);
+data.setCell(3, 3, 2044);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyRegisterPopUp')
+data.setCell(4, 1, 'cookies')
 data.setCell(4, 2, 'com.sap.testcases.SignUpTest')
-data.setCell(4, 3, 247);
+data.setCell(4, 3, 765);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'verifyTitle')
 data.setCell(5, 2, 'com.sap.testcases.SignUpTest')
-data.setCell(5, 3, 157);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'failTest')
-data.setCell(6, 2, 'com.sap.testcases.SignUpTest')
-data.setCell(6, 3, 47);
+data.setCell(5, 3, 448);
 window.suiteTableData['SAP_Sign_Up_Suite']= { tableData: data, tableDiv: 'times-div-SAP_Sign_Up_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-SAP_Sign_Up_Suite">
               </div> <!-- times-div-SAP_Sign_Up_Suite -->
             </div> <!-- times-div -->
@@ -348,65 +311,55 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">6835 ms</span>
+                <span class="method-start">14268 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyTitle</span>
-                <span class="method-start">6888 ms</span>
+                <span class="method-start">14343 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">7052 ms</span>
+                <span class="method-start">14799 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">cookies</span>
-                <span class="method-start">7056 ms</span>
+                <span class="method-start">14802 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">7576 ms</span>
+                <span class="method-start">15570 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">clikcSignUpBtn</span>
-                <span class="method-start">7577 ms</span>
+                <span class="method-name">clickSignUpBtn</span>
+                <span class="method-start">15572 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">10517 ms</span>
+                <span class="method-start">19420 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyRegisterPopUp</span>
-                <span class="method-start">10519 ms</span>
+                <span class="method-start">19422 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">13166 ms</span>
+                <span class="method-start">23054 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">EnterUserDetails(ravi, kone, ravikone@yopmail.com, Test@1234, Test@1234)</span>
-                <span class="method-start">13168 ms</span>
+                <span class="method-start">23055 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">15789 ms</span>
+                <span class="method-start">26839 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifySuccessMsg</span>
-                <span class="method-start">15791 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">17630 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">failTest</span>
-                <span class="method-start">17631 ms</span>
+                <span class="method-start">26841 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">30054 ms</span>
+                <span class="method-start">29489 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

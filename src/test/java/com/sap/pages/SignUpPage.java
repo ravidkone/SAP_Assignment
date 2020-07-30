@@ -1,5 +1,6 @@
 package com.sap.pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.sap.utility.TestBase;
 
-public class SignUpPage extends TestBase{
-	
+public class SignUpPage extends TestBase {
+
 	@FindBy(xpath = "//div[text()='OK']")
 	WebElement cookies;
 	@FindBy(xpath = "//div[text()='Sign up']")
@@ -37,33 +38,40 @@ public class SignUpPage extends TestBase{
 	WebElement successMsg;
 	@FindBy(xpath = "//a[@title='Close']")
 	WebElement popUpclose;
-	
+
+	Logger log = Logger.getLogger(getClass().getSimpleName());
+
 	public SignUpPage(WebDriver driver) {
 		PageFactory.initElements(TestBase.driver, this);
 	}
-	
-	public Boolean acceptCookies() {
-		Boolean cookiesStatus=cookies.isDisplayed();
-		cookies.click();
-		return cookiesStatus;
+
+	public void acceptCookies() throws InterruptedException {
+		if (oBrowserUtil.isDisplayed(cookies)) {
+			cookies.click();
+		} else {
+			log.info("Cookies button not available");
+		}
 	}
-	
+
 	public String getTitle() {
 		return driver.getTitle();
 	}
 
-	public void clickSignUp() throws InterruptedException {
-		signUpBtn.click();
+	public void clickSignUp() throws Exception {
+		if (oBrowserUtil.isDisplayed(signUpBtn)) {
+			signUpBtn.click();
+		} else
+			throw new Exception("Sign Up button not displayed ");
 		oBrowserUtil.waitForElementVisible(driver, frame, 2);
 	}
-	
-	public void verifyRegisterPopUp() throws InterruptedException {
-			oBrowserUtil.waitForElementVisible(driver, regPopUp, 3);
-			String text =regPopUp.getText();
-			System.out.println("frame text is: "+text);
+
+	public String verifyRegisterPopUp() throws InterruptedException {
+		oBrowserUtil.waitForElementVisible(driver, regPopUp, 3);
+		return regPopUp.getText();
 	}
-	
-	public void fillDetails(String firstName, String LastName, String Email, String password, String reEnterPasswprd) throws InterruptedException {
+
+	public void fillDetails(String firstName, String LastName, String Email, String password, String reEnterPasswprd)
+			throws InterruptedException {
 		enterFirstName.sendKeys(firstName);
 		enterLastName.sendKeys(LastName);
 		enterEmail.sendKeys(Email);
@@ -72,14 +80,26 @@ public class SignUpPage extends TestBase{
 		privacyStmt.click();
 		termsCondition.click();
 	}
+
 	public void submit() {
-		submitBtn.click();
+		if (oBrowserUtil.isDisplayed(submitBtn)) {
+			submitBtn.click();
+		} else {
+			log.info("Submit button not available");
+
+		}
 	}
+
 	public String getSucessMsg() throws InterruptedException {
-		oBrowserUtil.waitForElementVisible(driver, successMsg, 3);
+		oBrowserUtil.waitForElementVisible(driver, successMsg, 5);
 		return successMsg.getText();
 	}
+
 	public void closePopUp() {
-		popUpclose.click();
+		if (oBrowserUtil.isDisplayed(popUpclose)) {
+			popUpclose.click();
+		} else {
+			log.info("Pop Up close button not available");
+		}
 	}
 }

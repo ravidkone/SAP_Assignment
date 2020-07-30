@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="7" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="SAP Sign Up Suite" duration-ms="30200" started-at="2020-07-29T21:19:30Z" finished-at="2020-07-29T21:20:01Z">
+  <suite name="SAP Sign Up Suite" duration-ms="29584" started-at="2020-07-30T09:26:03Z" finished-at="2020-07-30T09:26:33Z">
     <groups>
     </groups>
-    <test name="Platform_Sign_up" duration-ms="30200" started-at="2020-07-29T21:19:30Z" finished-at="2020-07-29T21:20:01Z">
+    <test name="Platform_Sign_up" duration-ms="29584" started-at="2020-07-30T09:26:03Z" finished-at="2020-07-30T09:26:33Z">
       <class name="com.sap.testcases.SignUpTest">
-        <test-method status="PASS" signature="triggerDependency(java.lang.String)[pri:0, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="triggerDependency" is-config="true" duration-ms="6821" started-at="2020-07-29T21:19:31Z" finished-at="2020-07-29T21:19:37Z">
+        <test-method status="PASS" signature="triggerDependency(java.lang.String)[pri:0, instance:com.sap.testcases.SignUpTest@71d15f18]" name="triggerDependency" is-config="true" duration-ms="14255" started-at="2020-07-30T09:26:04Z" finished-at="2020-07-30T09:26:18Z">
           <params>
             <param index="0">
               <value>
@@ -18,43 +18,43 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- triggerDependency -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="setUp" is-config="true" duration-ms="52" started-at="2020-07-29T21:19:37Z" finished-at="2020-07-29T21:19:37Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@71d15f18]" name="setUp" is-config="true" duration-ms="75" started-at="2020-07-30T09:26:18Z" finished-at="2020-07-30T09:26:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyTitle()[pri:1, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="verifyTitle" duration-ms="157" started-at="2020-07-29T21:19:37Z" finished-at="2020-07-29T21:19:38Z">
+        <test-method status="PASS" signature="verifyTitle()[pri:1, instance:com.sap.testcases.SignUpTest@71d15f18]" name="verifyTitle" duration-ms="448" started-at="2020-07-30T09:26:18Z" finished-at="2020-07-30T09:26:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTitle -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="setUp" is-config="true" duration-ms="4" started-at="2020-07-29T21:19:38Z" finished-at="2020-07-29T21:19:38Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@71d15f18]" name="setUp" is-config="true" duration-ms="3" started-at="2020-07-30T09:26:18Z" finished-at="2020-07-30T09:26:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="cookies()[pri:2, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="cookies" duration-ms="516" started-at="2020-07-29T21:19:38Z" finished-at="2020-07-29T21:19:38Z">
+        <test-method status="PASS" signature="cookies()[pri:2, instance:com.sap.testcases.SignUpTest@71d15f18]" name="cookies" duration-ms="765" started-at="2020-07-30T09:26:18Z" finished-at="2020-07-30T09:26:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cookies -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="setUp" is-config="true" duration-ms="1" started-at="2020-07-29T21:19:38Z" finished-at="2020-07-29T21:19:38Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@71d15f18]" name="setUp" is-config="true" duration-ms="2" started-at="2020-07-30T09:26:19Z" finished-at="2020-07-30T09:26:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clikcSignUpBtn()[pri:3, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="clikcSignUpBtn" duration-ms="2935" started-at="2020-07-29T21:19:38Z" finished-at="2020-07-29T21:19:41Z">
+        <test-method status="PASS" signature="clickSignUpBtn()[pri:3, instance:com.sap.testcases.SignUpTest@71d15f18]" name="clickSignUpBtn" duration-ms="3845" started-at="2020-07-30T09:26:19Z" finished-at="2020-07-30T09:26:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clikcSignUpBtn -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="setUp" is-config="true" duration-ms="2" started-at="2020-07-29T21:19:41Z" finished-at="2020-07-29T21:19:41Z">
+        </test-method> <!-- clickSignUpBtn -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@71d15f18]" name="setUp" is-config="true" duration-ms="1" started-at="2020-07-30T09:26:23Z" finished-at="2020-07-30T09:26:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyRegisterPopUp()[pri:4, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="verifyRegisterPopUp" duration-ms="247" started-at="2020-07-29T21:19:41Z" finished-at="2020-07-29T21:19:41Z">
+        <test-method status="PASS" signature="verifyRegisterPopUp()[pri:4, instance:com.sap.testcases.SignUpTest@71d15f18]" name="verifyRegisterPopUp" duration-ms="2044" started-at="2020-07-30T09:26:23Z" finished-at="2020-07-30T09:26:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegisterPopUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="setUp" is-config="true" duration-ms="2" started-at="2020-07-29T21:19:44Z" finished-at="2020-07-29T21:19:44Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@71d15f18]" name="setUp" is-config="true" duration-ms="1" started-at="2020-07-30T09:26:27Z" finished-at="2020-07-30T09:26:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="EnterUserDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="EnterUserDetails" duration-ms="2618" started-at="2020-07-29T21:19:44Z" data-provider="retriveData" finished-at="2020-07-29T21:19:46Z">
+        <test-method status="PASS" signature="EnterUserDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:com.sap.testcases.SignUpTest@71d15f18]" name="EnterUserDetails" duration-ms="3780" started-at="2020-07-30T09:26:27Z" data-provider="retriveData" finished-at="2020-07-30T09:26:30Z">
           <params>
             <param index="0">
               <value>
@@ -85,64 +85,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EnterUserDetails -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="setUp" is-config="true" duration-ms="1" started-at="2020-07-29T21:19:46Z" finished-at="2020-07-29T21:19:46Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@71d15f18]" name="setUp" is-config="true" duration-ms="2" started-at="2020-07-30T09:26:30Z" finished-at="2020-07-30T09:26:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifySuccessMsg()[pri:6, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="verifySuccessMsg" duration-ms="1835" started-at="2020-07-29T21:19:46Z" finished-at="2020-07-29T21:19:48Z">
+        <test-method status="PASS" signature="verifySuccessMsg()[pri:6, instance:com.sap.testcases.SignUpTest@71d15f18]" name="verifySuccessMsg" duration-ms="2646" started-at="2020-07-30T09:26:30Z" finished-at="2020-07-30T09:26:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySuccessMsg -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="setUp" is-config="true" duration-ms="1" started-at="2020-07-29T21:19:48Z" finished-at="2020-07-29T21:19:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="failTest()[pri:7, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="failTest" duration-ms="47" started-at="2020-07-29T21:19:48Z" finished-at="2020-07-29T21:19:48Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:568)
-at org.testng.Assert.assertEquals(Assert.java:578)
-at com.sap.testcases.SignUpTest.failTest(SignUpTest.java:78)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failTest -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.sap.testcases.SignUpTest@73d4cc9e]" name="closeBrowser" is-config="true" duration-ms="131" started-at="2020-07-29T21:20:01Z" finished-at="2020-07-29T21:20:01Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.sap.testcases.SignUpTest@71d15f18]" name="closeBrowser" is-config="true" duration-ms="78" started-at="2020-07-30T09:26:33Z" finished-at="2020-07-30T09:26:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
