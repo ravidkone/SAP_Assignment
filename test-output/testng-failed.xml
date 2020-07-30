@@ -10,7 +10,7 @@
       <class name="com.sap.testcases.SignUpTest">
         <methods>
           <include name="triggerDependency"/>
-          <include name="verifySuccessMsg"/>
+          <include name="cookies"/>
           <include name="setUp"/>
           <include name="closeBrowser"/>
         </methods>

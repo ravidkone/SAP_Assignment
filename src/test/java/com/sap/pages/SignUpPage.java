@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.aventstack.extentreports.Status;
 import com.sap.utility.TestBase;
 
 public class SignUpPage extends TestBase {
@@ -45,11 +46,13 @@ public class SignUpPage extends TestBase {
 		PageFactory.initElements(TestBase.driver, this);
 	}
 
-	public void acceptCookies() throws InterruptedException {
+	public void acceptCookies() throws Exception {
 		if (oBrowserUtil.isDisplayed(cookies)) {
 			cookies.click();
+			extLogger.log(Status.INFO,"Clicked on cookies button");
 		} else {
-			log.info("Cookies button not available");
+			extLogger.log(Status.ERROR,"Unable to find cookies button");
+			//log.info("Cookies button not available");
 		}
 	}
 
@@ -60,6 +63,7 @@ public class SignUpPage extends TestBase {
 	public void clickSignUp() throws Exception {
 		if (oBrowserUtil.isDisplayed(signUpBtn)) {
 			signUpBtn.click();
+			extLogger.log(Status.INFO,"Clicked on Sign Up button");
 		} else
 			throw new Exception("Sign Up button not displayed ");
 		oBrowserUtil.waitForElementVisible(driver, frame, 2);
@@ -79,11 +83,13 @@ public class SignUpPage extends TestBase {
 		re_EnterPassword.sendKeys(reEnterPasswprd);
 		privacyStmt.click();
 		termsCondition.click();
+		extLogger.log(Status.INFO,"Filled All the details");
 	}
 
 	public void submit() {
 		if (oBrowserUtil.isDisplayed(submitBtn)) {
 			submitBtn.click();
+			extLogger.log(Status.INFO,"Clicked on Submit button");
 		} else {
 			log.info("Submit button not available");
 
@@ -98,6 +104,7 @@ public class SignUpPage extends TestBase {
 	public void closePopUp() {
 		if (oBrowserUtil.isDisplayed(popUpclose)) {
 			popUpclose.click();
+			extLogger.log(Status.INFO,"Clicked on pop up close button");
 		} else {
 			log.info("Pop Up close button not available");
 		}

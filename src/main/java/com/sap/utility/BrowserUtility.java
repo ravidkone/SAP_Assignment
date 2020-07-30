@@ -24,17 +24,21 @@ public class BrowserUtility extends TestBase {
 //		dc.setCapability(CapabilityType.BROWSER_NAME,BrowserType.CHROME);
 //		dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.MAC );
 			dc.setBrowserName(BrowserType.CHROME);
+			URL url = new URL(System.getProperty("Remote_WebDriver_IP"));
+			driver = new RemoteWebDriver(url, dc);
 
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			log.info("Launching Browser: " + browser);
 //			dc.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
 //			dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.MAC);
 			dc.setBrowserName(BrowserType.FIREFOX);
+			URL url = new URL(System.getProperty("Remote_WebDriver_IP"));
+			driver = new RemoteWebDriver(url, dc);
 
 		}
 
-		URL url = new URL(System.getProperty("Remote_WebDriver_IP"));
-		driver = new RemoteWebDriver(url, dc);
+//		URL url = new URL(System.getProperty("Remote_WebDriver_IP"));
+//		driver = new RemoteWebDriver(url, dc);
 		driver.get(System.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
