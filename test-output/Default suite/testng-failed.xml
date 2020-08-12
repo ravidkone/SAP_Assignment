@@ -3,19 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.sap.testcases.SignUpTest">
+      <class name="com.sap.testcases.launchBrowsers">
         <methods>
-          <include name="clikcSignUpBtn"/>
-          <include name="triggerDependency"/>
-          <include name="cookies"/>
-          <include name="verifyRegisterPopUp"/>
-          <include name="verifyTitle"/>
-          <include name="verifySuccessMsg"/>
-          <include name="closeBrowser"/>
           <include name="setUp"/>
-          <include name="EnterUserDetails"/>
+          <include name="signup"/>
         </methods>
-      </class> <!-- com.sap.testcases.SignUpTest -->
+      </class> <!-- com.sap.testcases.launchBrowsers -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

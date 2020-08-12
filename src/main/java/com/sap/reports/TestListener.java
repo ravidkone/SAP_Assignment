@@ -16,7 +16,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.sap.utility.CommonUtility;
 import com.sap.utility.TestBase;
 
-public class TestListener implements ITestListener {
+public class TestListener extends TestBase implements ITestListener {
 
 	// Extent Report Declarations
 	private static ExtentReports extent = ExtentManager.createInstance();
@@ -64,7 +64,7 @@ public class TestListener implements ITestListener {
 		try {
 			ExtentManager.extLogger.log(Status.FAIL,
 					"Failed" + ExtentManager.extLogger
-							.addScreenCaptureFromPath(CommonUtility.takeScreenShotWebReturnPath(TestBase.driver,
+							.addScreenCaptureFromPath(CommonUtility.takeScreenShotWebReturnPath(driver,
 									TestBase.sClassNameForScreenShot + "_" + result.getMethod().getMethodName())));
 		} catch (IOException e) {
 		}
@@ -78,7 +78,7 @@ public class TestListener implements ITestListener {
 
 			ExtentManager.extLogger.log(Status.SKIP,
 					"SKIP: " + ExtentManager.extLogger
-							.addScreenCaptureFromPath(CommonUtility.takeScreenShotWebReturnPath(TestBase.driver,
+							.addScreenCaptureFromPath(CommonUtility.takeScreenShotWebReturnPath(driver,
 									TestBase.sClassNameForScreenShot + "_" + result.getMethod().getMethodName())));
 		} catch (IOException e) {
 		}

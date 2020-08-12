@@ -1,8 +1,8 @@
 package com.sap.pages;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -42,8 +42,9 @@ public class SignUpPage extends TestBase {
 
 	Logger log = Logger.getLogger(getClass().getSimpleName());
 
-	public SignUpPage(WebDriver driver) {
-		PageFactory.initElements(TestBase.driver, this);
+	public SignUpPage(RemoteWebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
 	}
 
 	public void acceptCookies() throws Exception {
@@ -51,7 +52,8 @@ public class SignUpPage extends TestBase {
 			cookies.click();
 			extLogger.log(Status.INFO,"Clicked on cookies button");
 		} else {
-			extLogger.log(Status.ERROR,"Unable to find cookies button");
+			throw new Exception("Unable to find cookies button ");
+			//extLogger.log(Status.ERROR,"Unable to find cookies button");
 			//log.info("Cookies button not available");
 		}
 	}

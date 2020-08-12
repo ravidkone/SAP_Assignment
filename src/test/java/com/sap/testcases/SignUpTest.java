@@ -22,6 +22,7 @@ public class SignUpTest extends TestBase {
 
 	@Test(priority = 1)
 	public void verifyTitle() throws InterruptedException {
+		System.out.println("im verify title");
 		oCommon.verifyEqual(sp.getTitle(), Constants.pageTitle, "Verify Page Title",
 				extLogger.createNode("Verify Title"));
 		Assert.assertEquals(Constants.pageTitle, sp.getTitle());

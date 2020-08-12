@@ -49,6 +49,7 @@ public class TestBase {
 	public void closeBrowser() {
 		if(System.getProperty("AutomationRunning").equalsIgnoreCase(Constants.AutomationWeb)) {
 			driver.quit();
+			driver=null;
 			log.info("Browser closed");
 	}
 	}

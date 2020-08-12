@@ -419,3 +419,149 @@
 2020-07-30 18:56:39 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (74653b0b7b93e2f32f5b7866b25252d3)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
 2020-07-30 18:56:40 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (74653b0b7b93e2f32f5b7866b25252d3)] -> xpath: //a[@title='Close']]
 2020-07-30 18:56:40 INFO  SignUpTest 52 - Browser closed
+2020-07-30 19:08:51 INFO  BrowserUtility 23 - Launching Browser: chrome
+2020-07-30 19:10:04 INFO  SignUpTest 39 - Automation running on: Web
+2020-07-30 19:10:04 INFO  SignUpTest 40 - Environment is: stage
+2020-07-30 19:10:29 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (8d5ef88f5b9f24f4d7b2d3a57634a147)] -> xpath: //div[text()='Sign up']]
+2020-07-30 19:10:38 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (8d5ef88f5b9f24f4d7b2d3a57634a147)] -> xpath: //h1[text()='Registration']]
+2020-07-30 19:10:39 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (8d5ef88f5b9f24f4d7b2d3a57634a147)] -> xpath: //h1[text()='Registration']]
+2020-07-30 19:10:40 INFO  CommonUtility 52 - Current dir using System:/Users/ravi.kone/Documents/Test-WorkSpace/SAPFrameWork/src/test/resource/SAP_TestData.xlsx
+2020-07-30 19:11:08 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (8d5ef88f5b9f24f4d7b2d3a57634a147)] -> id: sapStoreRegisterFormSubmit]
+2020-07-30 19:11:15 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (8d5ef88f5b9f24f4d7b2d3a57634a147)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-07-30 19:11:15 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (8d5ef88f5b9f24f4d7b2d3a57634a147)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-07-30 19:11:16 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (8d5ef88f5b9f24f4d7b2d3a57634a147)] -> xpath: //a[@title='Close']]
+2020-07-30 19:11:18 INFO  SignUpTest 52 - Browser closed
+2020-07-30 19:15:06 INFO  BrowserUtility 23 - Launching Browser: chrome
+2020-07-30 19:15:25 INFO  SignUpTest 39 - Automation running on: Web
+2020-07-30 19:15:25 INFO  SignUpTest 40 - Environment is: stage
+2020-07-30 19:16:05 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (907c75542708a3d6f0b852e8447dcb9d)] -> xpath: //div[text()='Sign up']]
+2020-07-30 19:16:11 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (907c75542708a3d6f0b852e8447dcb9d)] -> xpath: //h1[text()='Registration']]
+2020-07-30 19:16:11 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (907c75542708a3d6f0b852e8447dcb9d)] -> xpath: //h1[text()='Registration']]
+2020-07-30 19:16:11 INFO  CommonUtility 52 - Current dir using System:/Users/ravi.kone/Documents/Test-WorkSpace/SAPFrameWork/src/test/resource/SAP_TestData.xlsx
+2020-07-30 19:16:23 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (907c75542708a3d6f0b852e8447dcb9d)] -> id: sapStoreRegisterFormSubmit]
+2020-07-30 19:16:27 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (907c75542708a3d6f0b852e8447dcb9d)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-07-30 19:16:27 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (907c75542708a3d6f0b852e8447dcb9d)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-07-30 19:16:28 INFO  BrowserUtility 52 - Displayed [[RemoteWebDriver: chrome on LINUX (907c75542708a3d6f0b852e8447dcb9d)] -> xpath: //a[@title='Close']]
+2020-07-30 19:16:53 INFO  SignUpTest 52 - Browser closed
+2020-08-01 09:19:19 INFO  BrowserUtility 24 - Launching Browser: chrome
+2020-08-01 09:19:37 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:19:37 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:20:12 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (781cd252fa27633a9ff81f1fa248cb73)] -> xpath: //div[text()='Sign up']]
+2020-08-01 09:20:16 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (781cd252fa27633a9ff81f1fa248cb73)] -> xpath: //h1[text()='Registration']]
+2020-08-01 09:20:17 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (781cd252fa27633a9ff81f1fa248cb73)] -> xpath: //h1[text()='Registration']]
+2020-08-01 09:20:17 INFO  CommonUtility 52 - Current dir using System:/Users/ravi.kone/Documents/Test-WorkSpace/SAPFrameWork/src/test/resource/SAP_TestData.xlsx
+2020-08-01 09:20:22 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (781cd252fa27633a9ff81f1fa248cb73)] -> id: sapStoreRegisterFormSubmit]
+2020-08-01 09:20:24 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (781cd252fa27633a9ff81f1fa248cb73)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-08-01 09:20:24 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (781cd252fa27633a9ff81f1fa248cb73)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-08-01 09:20:24 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (781cd252fa27633a9ff81f1fa248cb73)] -> xpath: //a[@title='Close']]
+2020-08-01 09:20:38 INFO  SignUpTest 53 - Browser closed
+2020-08-01 09:21:12 INFO  BrowserUtility 32 - Launching Browser: firefox
+2020-08-01 09:21:12 INFO  BrowserUtility 24 - Launching Browser: chrome
+2020-08-01 09:21:42 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:21:42 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:21:44 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (2fcb9f66975acee513c2f2b7266a719e)] -> xpath: //div[text()='OK']]
+2020-08-01 09:21:46 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (2fcb9f66975acee513c2f2b7266a719e)] -> xpath: //div[text()='Sign up']]
+2020-08-01 09:22:13 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:22:13 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:28:15 INFO  BrowserUtility 32 - Launching Browser: firefox
+2020-08-01 09:28:15 INFO  BrowserUtility 24 - Launching Browser: chrome
+2020-08-01 09:28:39 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:28:39 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:28:39 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:28:39 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:31:24 INFO  BrowserUtility 24 - Launching Browser: chrome
+2020-08-01 09:31:31 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:31:31 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:33:09 INFO  BrowserUtility 24 - Launching Browser: chrome
+2020-08-01 09:33:25 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:33:25 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:36:39 INFO  BrowserUtility 24 - Launching Browser: chrome
+2020-08-01 09:36:46 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:36:46 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:38:34 INFO  BrowserUtility 24 - Launching Browser: chrome
+2020-08-01 09:38:47 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:38:47 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:38:47 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (5f87c3c06c983acb3594f1c28a7d9906)] -> xpath: //div[text()='OK']]
+2020-08-01 09:38:49 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (5f87c3c06c983acb3594f1c28a7d9906)] -> xpath: //div[text()='Sign up']]
+2020-08-01 09:38:53 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (5f87c3c06c983acb3594f1c28a7d9906)] -> xpath: //h1[text()='Registration']]
+2020-08-01 09:38:53 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (5f87c3c06c983acb3594f1c28a7d9906)] -> xpath: //h1[text()='Registration']]
+2020-08-01 09:38:53 INFO  CommonUtility 52 - Current dir using System:/Users/ravi.kone/Documents/Test-WorkSpace/SAPFrameWork/src/test/resource/SAP_TestData.xlsx
+2020-08-01 09:39:04 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (5f87c3c06c983acb3594f1c28a7d9906)] -> id: sapStoreRegisterFormSubmit]
+2020-08-01 09:39:07 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (5f87c3c06c983acb3594f1c28a7d9906)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-08-01 09:39:08 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (5f87c3c06c983acb3594f1c28a7d9906)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-08-01 09:39:08 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (5f87c3c06c983acb3594f1c28a7d9906)] -> xpath: //a[@title='Close']]
+2020-08-01 09:39:09 INFO  SignUpTest 53 - Browser closed
+2020-08-01 09:40:14 INFO  BrowserUtility 24 - Launching Browser: chrome
+2020-08-01 09:40:23 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:40:23 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:40:23 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (7cff0cd07f8b285321bd75a87e88672b)] -> xpath: //div[text()='OK']]
+2020-08-01 09:40:24 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (7cff0cd07f8b285321bd75a87e88672b)] -> xpath: //div[text()='Sign up']]
+2020-08-01 09:40:28 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (7cff0cd07f8b285321bd75a87e88672b)] -> xpath: //h1[text()='Registration']]
+2020-08-01 09:40:29 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (7cff0cd07f8b285321bd75a87e88672b)] -> xpath: //h1[text()='Registration']]
+2020-08-01 09:40:29 INFO  CommonUtility 52 - Current dir using System:/Users/ravi.kone/Documents/Test-WorkSpace/SAPFrameWork/src/test/resource/SAP_TestData.xlsx
+2020-08-01 09:40:33 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (7cff0cd07f8b285321bd75a87e88672b)] -> id: sapStoreRegisterFormSubmit]
+2020-08-01 09:40:34 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (7cff0cd07f8b285321bd75a87e88672b)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-08-01 09:40:35 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (7cff0cd07f8b285321bd75a87e88672b)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-08-01 09:40:35 INFO  BrowserUtility 54 - Displayed [[RemoteWebDriver: chrome on LINUX (7cff0cd07f8b285321bd75a87e88672b)] -> xpath: //a[@title='Close']]
+2020-08-01 09:40:35 INFO  SignUpTest 53 - Browser closed
+2020-08-01 09:41:01 INFO  BrowserUtility 24 - Launching Browser: chrome
+2020-08-01 09:41:10 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:41:10 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:43:32 INFO  BrowserUtility 24 - Launching Browser: chrome
+2020-08-01 09:43:32 INFO  BrowserUtility 33 - Launching Browser: firefox
+2020-08-01 09:43:57 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:43:57 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:43:57 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 09:43:57 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 09:43:58 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (a62a3313-aacd-476a-b539-d3f6303a74e9)] -> xpath: //div[text()='OK']]
+2020-08-01 09:43:58 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (a62a3313-aacd-476a-b539-d3f6303a74e9)] -> xpath: //div[text()='OK']]
+2020-08-01 09:43:59 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (a62a3313-aacd-476a-b539-d3f6303a74e9)] -> xpath: //div[text()='Sign up']]
+2020-08-01 09:44:47 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (a62a3313-aacd-476a-b539-d3f6303a74e9)] -> xpath: //h1[text()='Registration']]
+2020-08-01 09:44:47 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (a62a3313-aacd-476a-b539-d3f6303a74e9)] -> xpath: //h1[text()='Registration']]
+2020-08-01 09:44:49 INFO  CommonUtility 52 - Current dir using System:/Users/ravi.kone/Documents/Test-WorkSpace/SAPFrameWork/src/test/resource/SAP_TestData.xlsx
+2020-08-01 09:44:50 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (a62a3313-aacd-476a-b539-d3f6303a74e9)] -> xpath: //h1[text()='Registration']]
+2020-08-01 09:44:50 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (a62a3313-aacd-476a-b539-d3f6303a74e9)] -> xpath: //h1[text()='Registration']]
+2020-08-01 09:44:50 INFO  CommonUtility 52 - Current dir using System:/Users/ravi.kone/Documents/Test-WorkSpace/SAPFrameWork/src/test/resource/SAP_TestData.xlsx
+2020-08-01 09:44:56 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (a62a3313-aacd-476a-b539-d3f6303a74e9)] -> id: sapStoreRegisterFormSubmit]
+2020-08-01 09:44:56 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (a62a3313-aacd-476a-b539-d3f6303a74e9)] -> id: sapStoreRegisterFormSubmit]
+2020-08-01 11:05:49 INFO  SignUpTest 53 - Browser closed
+2020-08-01 11:35:15 INFO  BrowserUtility 24 - Launching Browser: chrome
+2020-08-01 11:35:15 INFO  BrowserUtility 33 - Launching Browser: firefox
+2020-08-01 11:35:58 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 11:35:58 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 11:35:59 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 11:35:59 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 11:36:00 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (d34f726c-b0a4-47c5-8216-d42fe757837c)] -> xpath: //div[text()='OK']]
+2020-08-01 11:36:00 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (d34f726c-b0a4-47c5-8216-d42fe757837c)] -> xpath: //div[text()='OK']]
+2020-08-01 11:36:21 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (d34f726c-b0a4-47c5-8216-d42fe757837c)] -> xpath: //div[text()='Sign up']]
+2020-08-01 11:37:00 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (d34f726c-b0a4-47c5-8216-d42fe757837c)] -> xpath: //h1[text()='Registration']]
+2020-08-01 11:37:00 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (d34f726c-b0a4-47c5-8216-d42fe757837c)] -> xpath: //h1[text()='Registration']]
+2020-08-01 11:37:02 INFO  CommonUtility 52 - Current dir using System:/Users/ravi.kone/Documents/Test-WorkSpace/SAPFrameWork/src/test/resource/SAP_TestData.xlsx
+2020-08-01 11:37:02 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (d34f726c-b0a4-47c5-8216-d42fe757837c)] -> xpath: //h1[text()='Registration']]
+2020-08-01 11:37:03 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (d34f726c-b0a4-47c5-8216-d42fe757837c)] -> xpath: //h1[text()='Registration']]
+2020-08-01 11:37:03 INFO  CommonUtility 52 - Current dir using System:/Users/ravi.kone/Documents/Test-WorkSpace/SAPFrameWork/src/test/resource/SAP_TestData.xlsx
+2020-08-01 11:37:08 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (d34f726c-b0a4-47c5-8216-d42fe757837c)] -> id: sapStoreRegisterFormSubmit]
+2020-08-01 11:37:08 INFO  BrowserUtility 56 - Displayed [[RemoteWebDriver: firefox on LINUX (d34f726c-b0a4-47c5-8216-d42fe757837c)] -> id: sapStoreRegisterFormSubmit]
+2020-08-01 11:44:11 INFO  SignUpTest 53 - Browser closed
+2020-08-01 11:52:36 INFO  BrowserUtility 34 - Launching Browser: firefox
+2020-08-01 11:52:36 INFO  BrowserUtility 26 - Launching Browser: chrome
+2020-08-01 11:53:01 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 11:53:01 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 11:53:01 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 11:53:01 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 11:53:02 INFO  BrowserUtility 55 - Displayed [[RemoteWebDriver: chrome on LINUX (ba1d2f7318f20bf264748e3a7966a87a)] -> xpath: //div[text()='OK']]
+2020-08-01 11:53:03 INFO  BrowserUtility 55 - Displayed [[RemoteWebDriver: chrome on LINUX (ba1d2f7318f20bf264748e3a7966a87a)] -> xpath: //div[text()='OK']]
+2020-08-01 11:53:04 INFO  BrowserUtility 55 - Displayed [[RemoteWebDriver: chrome on LINUX (ba1d2f7318f20bf264748e3a7966a87a)] -> xpath: //div[text()='Sign up']]
+2020-08-01 12:00:27 INFO  BrowserUtility 26 - Launching Browser: chrome
+2020-08-01 12:00:36 INFO  SignUpTest 39 - Automation running on: Web
+2020-08-01 12:00:36 INFO  SignUpTest 40 - Environment is: stage
+2020-08-01 12:00:36 INFO  BrowserUtility 55 - Displayed [[RemoteWebDriver: chrome on LINUX (c571b023ef8c003a31ce1be333133b33)] -> xpath: //div[text()='OK']]
+2020-08-01 12:00:37 INFO  BrowserUtility 55 - Displayed [[RemoteWebDriver: chrome on LINUX (c571b023ef8c003a31ce1be333133b33)] -> xpath: //div[text()='Sign up']]
+2020-08-01 12:00:40 INFO  BrowserUtility 55 - Displayed [[RemoteWebDriver: chrome on LINUX (c571b023ef8c003a31ce1be333133b33)] -> xpath: //h1[text()='Registration']]
+2020-08-01 12:00:40 INFO  BrowserUtility 55 - Displayed [[RemoteWebDriver: chrome on LINUX (c571b023ef8c003a31ce1be333133b33)] -> xpath: //h1[text()='Registration']]
+2020-08-01 12:00:40 INFO  CommonUtility 52 - Current dir using System:/Users/ravi.kone/Documents/Test-WorkSpace/SAPFrameWork/src/test/resource/SAP_TestData.xlsx
+2020-08-01 12:00:50 INFO  BrowserUtility 55 - Displayed [[RemoteWebDriver: chrome on LINUX (c571b023ef8c003a31ce1be333133b33)] -> id: sapStoreRegisterFormSubmit]
+2020-08-01 12:00:53 INFO  BrowserUtility 55 - Displayed [[RemoteWebDriver: chrome on LINUX (c571b023ef8c003a31ce1be333133b33)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-08-01 12:00:53 INFO  BrowserUtility 55 - Displayed [[RemoteWebDriver: chrome on LINUX (c571b023ef8c003a31ce1be333133b33)] -> xpath: //h1[text()='Thank you for registering with SAP Conversational AI']]
+2020-08-01 12:00:54 INFO  BrowserUtility 55 - Displayed [[RemoteWebDriver: chrome on LINUX (c571b023ef8c003a31ce1be333133b33)] -> xpath: //a[@title='Close']]
+2020-08-01 12:00:54 INFO  SignUpTest 53 - Browser closed

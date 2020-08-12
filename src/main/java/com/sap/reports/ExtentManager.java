@@ -1,6 +1,8 @@
 package com.sap.reports;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.openqa.selenium.Platform;
 
@@ -17,6 +19,7 @@ public class ExtentManager extends TestBase{
  //   public static ExtentTest extLogger;
     
     private static Platform platform;
+	String sDate=new SimpleDateFormat("'ExtentReport_'yyyyMMddHHmm''").format(new Date());
     private static String reportFileName = "Ravi_Automaton_Report.html";
     private static String macPath = System.getProperty("user.dir")+ "/TestReport";
     private static String windowsPath = System.getProperty("user.dir")+ "\\TestReport";

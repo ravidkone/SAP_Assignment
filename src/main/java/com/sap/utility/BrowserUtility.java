@@ -5,9 +5,11 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -19,23 +21,24 @@ public class BrowserUtility extends TestBase {
 	public void launchBrowser(String browser) throws MalformedURLException {
 		dc = new DesiredCapabilities();
 
+//		if(driver==null) {
 		if (browser.equalsIgnoreCase("chrome")) {
 			log.info("Launching Browser: " + browser);
-//		dc.setCapability(CapabilityType.BROWSER_NAME,BrowserType.CHROME);
-//		dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.MAC );
-			dc.setBrowserName(BrowserType.CHROME);
+		dc.setCapability(CapabilityType.BROWSER_NAME,BrowserType.CHROME);
+		dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.LINUX );
+		//	dc.setBrowserName(BrowserType.CHROME);
 			URL url = new URL(System.getProperty("Remote_WebDriver_IP"));
 			driver = new RemoteWebDriver(url, dc);
 
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			log.info("Launching Browser: " + browser);
-//			dc.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
-//			dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.MAC);
-			dc.setBrowserName(BrowserType.FIREFOX);
+			dc.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
+			dc.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
+		//	dc.setBrowserName(BrowserType.FIREFOX);
 			URL url = new URL(System.getProperty("Remote_WebDriver_IP"));
 			driver = new RemoteWebDriver(url, dc);
-
 		}
+//		}
 
 //		URL url = new URL(System.getProperty("Remote_WebDriver_IP"));
 //		driver = new RemoteWebDriver(url, dc);
