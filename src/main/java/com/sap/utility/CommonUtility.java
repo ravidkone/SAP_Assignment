@@ -30,7 +30,7 @@ public class CommonUtility {
 	Properties prop = new Properties();
 	static Workbook book;
 	static Sheet sheet;
-	public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir") + "/src/test/resource/SAP_TestData.xlsx";
+	public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir") + "/resource/TestData.xlsx";
 	Logger log = Logger.getLogger(getClass().getSimpleName());
 
 	public void loadConfigProperty(String sConfigPath) throws Exception {

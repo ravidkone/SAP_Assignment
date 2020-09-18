@@ -21,7 +21,6 @@ public class TestListener extends TestBase implements ITestListener {
 	// Extent Report Declarations
 	private static ExtentReports extent = ExtentManager.createInstance();
 	private static ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
-
 	public synchronized void onStart(ITestContext context) {
 		System.out.println("Test Suite started!");
 		System.out.println("*******************");
